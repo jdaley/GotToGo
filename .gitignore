@@ -3,6 +3,9 @@
 *.user
 *.sln.docstates
 
+# Server-specific configuration
+GotToGo.config
+
 # Build results
 
 [Dd]ebug/
