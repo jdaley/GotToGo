@@ -17,32 +17,13 @@
             height: 100%;
         }
     </style>
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG1dO1Chhf56iJQG6YeLO50sVDE_w3nk4&sensor=false">
-    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG1dO1Chhf56iJQG6YeLO50sVDE_w3nk4&sensor=false"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         // Enable the visual refresh (more modern-looking Google Maps)
         google.maps.visualRefresh = true;
 
         var map;
-
-        var toilets = [
-            {
-                name: 'Poulton Park',
-                lat: -33.97942512,
-                lng: 151.0982179,
-            },
-            {
-                name: 'Helipad - Dr Reid Park',
-                lat: -28.62834519,
-                lng: 153.0017754
-            },
-            {
-                name: 'Federal Park',
-                lat: -32.89961804,
-                lng: 151.6701746
-            }
-        ];
 
         function initialize() {
             var mapOptions = {
@@ -54,9 +35,14 @@
             map = new google.maps.Map(document.getElementById("map-canvas"),
                 mapOptions);
 
-            for (var i = 0; i < toilets.length; i++) {
-                placeMarker(toilets[i].name, toilets[i].lat, toilets[i].lng);
-            }
+            $.ajax({
+                accepts: 'application/json',
+                url: '/api/Toilet'
+            }).done(function (toilets) {
+                for (var i = 0; i < toilets.length; i++) {
+                    placeMarker(toilets[i].Name, toilets[i].Lat, toilets[i].Lng);
+                }
+            });
         }
 
         function placeMarker(title, lat, lng) {
