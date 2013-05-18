@@ -12,6 +12,9 @@ build/
 [Bb]in/
 [Oo]bj/
 
+# Publish Web Output
+*.pubxml
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
