@@ -14,7 +14,16 @@ namespace GotToGo
 
         static GotToGoConfig()
         {
-            string configPath = Path.Combine(HttpRuntime.AppDomainAppPath, "GotToGo.config");
+            string configPath;
+
+            if (HttpRuntime.AppDomainAppId == null)
+            {
+                configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "GotToGo.config");
+            }
+            else
+            {
+                configPath = Path.Combine(HttpRuntime.AppDomainAppPath, "GotToGo.config");
+            }
 
             if (!File.Exists(configPath))
             {

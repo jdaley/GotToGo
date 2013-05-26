@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotToGo", "GotToGo\GotToGo.csproj", "{2012C566-B9E3-4CBE-BBBF-A1FC188FD724}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotToGo.DataLoader", "GotToGo.DataLoader\GotToGo.DataLoader.csproj", "{C7362D55-5C98-457D-8619-84AA8FD05259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{2012C566-B9E3-4CBE-BBBF-A1FC188FD724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2012C566-B9E3-4CBE-BBBF-A1FC188FD724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2012C566-B9E3-4CBE-BBBF-A1FC188FD724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7362D55-5C98-457D-8619-84AA8FD05259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7362D55-5C98-457D-8619-84AA8FD05259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7362D55-5C98-457D-8619-84AA8FD05259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7362D55-5C98-457D-8619-84AA8FD05259}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
